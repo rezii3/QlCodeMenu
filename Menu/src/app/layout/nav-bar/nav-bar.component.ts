@@ -8,14 +8,5 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   language = 'English';
-  
-  activeSection: 'food' | 'drinks' = 'food';
 
-  showFood() {
-    this.activeSection = 'food';
-  }
-
-  showDrinks() {
-    this.activeSection = 'drinks';
-  }
 }

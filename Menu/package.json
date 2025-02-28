@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
+    "@netlify/angular-runtime": "^2.2.2",
     "angularx-qrcode": "^19.0.0",
     "ng-zorro-antd": "^19.1.0",
     "ngx-qrcode": "^0.1.0-rc.1",

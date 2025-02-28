@@ -4,21 +4,25 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 
 import { MainComponent } from './main/main.component';
-import { BarComponent } from './bar/bar.component';
+
+import { DrinkModule } from "../drink/drink.module";
+import { FoodModule } from "../food/food.module";
+import { WineModule } from "../wine/wine.module";
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    BarComponent
   ],
   exports: [
     MainComponent,
-    BarComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
-  ]
+    HomeRoutingModule,
+    DrinkModule,
+    FoodModule,
+    WineModule
+]
 })
 export class HomeModule { }

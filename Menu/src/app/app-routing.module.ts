@@ -6,6 +6,11 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
   },
+  {
+    path:'bar',
+    title: 'bar',
+    loadChildren: () => import('./features/bar-main/bar-main.module').then((m) => m.BarMainModule)
+  },
 
   {
     path:'dishes',
@@ -13,13 +18,13 @@ const routes: Routes = [
     loadChildren: () => import('./features/food/food.module').then((m) => m.FoodModule)
   },
   {
-    path:'Drinks',
-    title: 'Drinks',
+    path:'drinks',
+    title: 'drinks',
     loadChildren: () => import('./features/drink/drink.module').then((m) => m.DrinkModule)
   },
   {
-    path:'Wines',
-    title: 'Wines',
+    path:'wine',
+    title: 'wine',
     loadChildren: () => import('./features/wine/wine.module').then((m) => m.WineModule)
   },
 ];
