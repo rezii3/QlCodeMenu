@@ -1,0 +1,24 @@
+<div class="navbar">
+    <div class="background-image" [ngClass]="{'food-bg': activeSection === 'food', 'drinks-bg': activeSection === 'drinks'}">
+      <img src="https://scontent.ftbs3-1.fna.fbcdn.net/v/t39.30808-6/480692695_494335970392723_3381369194826490406_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8Q63sr4yYMQQ7kNvgFPwtLE&_nc_oc=AdgdF6xXwUfQTmmjmOzNW4ZMZV0WKHJXX_xvyZLafWSf2gfwsKwtiH8OSszd9W4_RX0&_nc_zt=23&_nc_ht=scontent.ftbs3-1.fna&_nc_gid=AsJd4hQpd4mcKXLRszwl10R&oh=00_AYCfQ7TMGESK6Oj1eA78bVh5l5N20e8ZgPayLYwCnAnogA&oe=67C792B4" 
+           alt="Restaurant">
+    </div>
+    <div class="content">
+      <button class="language-selector">{{ language }}</button>
+      <h1>New Space Rustavi</h1>
+      <p><nz-icon nzType="pushpin" nzTheme="outline" /> მე-18 მკრ, სპორტის სასახლის მიმდებარე ტერიტორია  <nz-icon nzType="phone" nzTheme="outline" /> 595 01 97 01</p>
+      <p><nz-icon nzType="wifi" nzTheme="outline" />  newspace</p>
+      <p>ნიუ სფეისი არის კაფე-რესტორანი სივრცე კომფორტული დასვენებისა და მუშაობისთვის, მყუდრო და სასიამოვნო საღამოს გასატარებლად.</p>
+      
+      <div class="buttons">
+        <button class="main-menu" [class.active]="activeSection === 'food'" (click)="showFood()">Main menu</button>
+        <button class="bar" [class.active]="activeSection === 'drinks'" (click)="showDrinks()">Bar</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- FOOD COMPONENT -->
+  <app-main *ngIf="activeSection === 'food'"></app-main>
+  
+  <!-- DRINKS COMPONENT -->
+  <app-bar *ngIf="activeSection === 'drinks'"></app-bar>
