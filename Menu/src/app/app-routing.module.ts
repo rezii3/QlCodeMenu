@@ -18,8 +18,8 @@ const routes: Routes = [
     loadChildren: () => import('./features/food/food.module').then((m) => m.FoodModule)
   },
   {
-    path:'drinks',
-    title: 'drinks',
+    path:'cocktails',
+    title: 'cocktails',
     loadChildren: () => import('./features/drink/drink.module').then((m) => m.DrinkModule)
   },
   {

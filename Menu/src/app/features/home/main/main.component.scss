@@ -3,6 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    p{
+      margin: 20px 0px;
+      color: gray;
+    }
+
   }
   .content {
     display: flex;
@@ -57,11 +62,12 @@
   .food {
     background-image: url('../../../../assets/img/food.png');
   }
-  
-  .drink {
-    background-image: url('../../../../assets/img/drinks.jpg');
+  .salad {
+    background-image: url('../../../../assets/img/salad.jpg');
   }
-  
-  .wine {
-    background-image: url('../../../../assets/img/wine.jpg');
+  .soup {
+    background-image: url('../../../../assets/img/soup2.jpg');
+  }
+  .dessert {
+    background-image: url('../../../../assets/img/dessert.jpg');
   }
