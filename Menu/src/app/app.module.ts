@@ -17,6 +17,7 @@ import { DrinkModule } from './features/drink/drink.module';
 import { WineModule } from './features/wine/wine.module';
 import { HomeModule } from './features/home/home.module';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -38,6 +39,7 @@ registerLocaleData(en);
     WineModule,
     HomeModule,
     NzIconModule,
+    HttpClientModule
   ],
   providers: [
     provideNzI18n(en_US),

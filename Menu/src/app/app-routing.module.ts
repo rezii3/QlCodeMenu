@@ -27,6 +27,26 @@ const routes: Routes = [
     title: 'wine',
     loadChildren: () => import('./features/wine/wine.module').then((m) => m.WineModule)
   },
+  {
+    path:'illy',
+    title: 'illy',
+    loadChildren: () => import('./features/illy/illy.module').then((m) => m.IllyModule)
+  },
+  {
+    path:'salads',
+    title: 'salads',
+    loadChildren: () => import('./features/salad/salad.module').then((m) => m.SaladModule)
+  },
+  {
+    path:'soups',
+    title: 'soups',
+    loadChildren: () => import('./features/soup/soup.module').then((m) => m.SoupModule)
+  },
+  {
+    path:'desserts',
+    title: 'desserts',
+    loadChildren: () => import('./features/desert/desert.module').then((m) => m.DesertModule)
+  },
 ];
 
 @NgModule({

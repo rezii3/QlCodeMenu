@@ -1,20 +1,7 @@
-<div class="card">
-    <div class="image-container">
-      <img src="assets/soup.jpg" alt="Soup" />
-    </div>
-    <div class="card-content">
-      <div class="card-header">
-        <h3>Soup</h3>
-        <span class="weight">300 g</span>
-      </div>
-      <p class="ingredients">Potatoes, carrots, onions, green onions</p>
-      <div class="vegan-label">
-        <span>🌱 Vegan</span>
-      </div>
-      <div class="card-footer">
-        <span class="price">4.3$</span>
-        <button class="add-button">+</button>
-      </div>
-    </div>
-  </div>
-  
+<div class="menu">
+<app-menu-cards  *ngFor="let dis of dishes"
+[image]="dis.img"
+[name]="dis.name"
+[description]="dis.description"
+[price]="dis.price"></app-menu-cards>
+</div>
