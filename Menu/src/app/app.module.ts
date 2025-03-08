@@ -18,6 +18,7 @@ import { WineModule } from './features/wine/wine.module';
 import { HomeModule } from './features/home/home.module';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 
@@ -29,6 +30,7 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     NavBarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

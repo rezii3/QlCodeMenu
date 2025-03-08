@@ -47,6 +47,16 @@ const routes: Routes = [
     title: 'desserts',
     loadChildren: () => import('./features/desert/desert.module').then((m) => m.DesertModule)
   },
+  {
+    path:'pizza',
+    title: 'pizza',
+    loadChildren: () => import('./features/pizza/pizza.module').then((m) => m.PizzaModule)
+  },
+  {
+    path:'asia-foods',
+    title: 'asia-foods',
+    loadChildren: () => import('./features/asia/asia.module').then((m) => m.AsiaModule)
+  },
 ];
 
 @NgModule({
