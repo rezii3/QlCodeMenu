@@ -19,6 +19,7 @@ import { HomeModule } from './features/home/home.module';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './layout/footer/footer.component';
+import { SharedModule } from "./shared/shared.module";
 
 
 
@@ -41,8 +42,9 @@ registerLocaleData(en);
     WineModule,
     HomeModule,
     NzIconModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    SharedModule
+],
   providers: [
     provideNzI18n(en_US),
     provideAnimationsAsync(),

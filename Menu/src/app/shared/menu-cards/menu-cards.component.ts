@@ -12,4 +12,5 @@ export class MenuCardsComponent {
   @Input() description!: string;
   @Input() price!: number;
   @Input() image!: string;
+
 }

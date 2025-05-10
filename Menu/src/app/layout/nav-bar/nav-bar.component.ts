@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav-bar',
   standalone: false,
@@ -8,5 +8,17 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   language = 'English';
+  showBackButton: boolean = false;
 
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      const currentUrl = this.router.url;
+      // შეცვალე ეს მისამართები, როგორც საჭიროა
+      this.showBackButton = !['/', '/bar'].includes(currentUrl);
+    });
+  }
+
+  goBack() {
+    window.history.back();
+  }
 }

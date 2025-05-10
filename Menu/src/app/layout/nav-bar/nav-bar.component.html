@@ -1,17 +1,21 @@
 <div class="navbar">
   <div class="background-image">
-    <img src="https://scontent.ftbs3-1.fna.fbcdn.net/v/t39.30808-6/480692695_494335970392723_3381369194826490406_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8Q63sr4yYMQQ7kNvgFPwtLE&_nc_oc=AdgdF6xXwUfQTmmjmOzNW4ZMZV0WKHJXX_xvyZLafWSf2gfwsKwtiH8OSszd9W4_RX0&_nc_zt=23&_nc_ht=scontent.ftbs3-1.fna&_nc_gid=AsJd4hQpd4mcKXLRszwl10R&oh=00_AYCfQ7TMGESK6Oj1eA78bVh5l5N20e8ZgPayLYwCnAnogA&oe=67C792B4" 
-         alt="Restaurant">
+    <img src="assets/img/auz.jpg" alt="">
   </div>
   <div class="content">
     <h1>New Space Rustavi</h1>
-    <p><nz-icon nzType="phone" nzTheme="outline" /> 595 01 97 01</p>
-    <p><nz-icon nzType="wifi" nzTheme="outline" /> Password: newspace</p>
-    
+    <p><nz-icon nzType="phone" nzTheme="outline"></nz-icon> 595 01 97 01</p>
+    <p><nz-icon nzType="wifi" nzTheme="outline"></nz-icon> Password: newspace</p>
+
     <div class="buttons">
-      <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Main menu</button>
+      <div class="left-side">
+        <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Main menu</button>
       <button routerLink="/bar" routerLinkActive="active">Bar</button>
-  </div>
-  
+      </div>
+
+      <div class="right-side">
+        <button *ngIf="showBackButton" class="back-btn" (click)="goBack()"><nz-icon nzType="arrow-left" nzTheme="outline" /></button>
+      </div>
+    </div>
   </div>
 </div>

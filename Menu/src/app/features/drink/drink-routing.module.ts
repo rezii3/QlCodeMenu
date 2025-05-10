@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DrinkCardComponent } from './drink-card/drink-card.component';
 
 const routes: Routes = [
-  {path: 'drinks',
+  {path: '',
       component: DrinkCardComponent}
 ];
 

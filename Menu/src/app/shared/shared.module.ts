@@ -3,18 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { MenuCardsComponent } from './menu-cards/menu-cards.component';
+import { NzImageModule } from 'ng-zorro-antd/image';
+import { BackComponent } from './back/back.component';
 
 
 @NgModule({
   declarations: [
-    MenuCardsComponent
+    MenuCardsComponent,
+    BackComponent
   ],
   exports: [
-    MenuCardsComponent
+    MenuCardsComponent,
+    BackComponent
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    NzImageModule
   ]
 })
 export class SharedModule { }
