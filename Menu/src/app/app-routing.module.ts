@@ -52,11 +52,6 @@ const routes: Routes = [
     title: 'pizza',
     loadChildren: () => import('./features/pizza/pizza.module').then((m) => m.PizzaModule)
   },
-  {
-    path:'asia-foods',
-    title: 'asia-foods',
-    loadChildren: () => import('./features/asia/asia.module').then((m) => m.AsiaModule)
-  },
 ];
 
 @NgModule({
