@@ -13,5 +13,4 @@ export class MenuService {
   getDishes(){
     return this._http.get<MenuItem[]>(this.dishes);
   }
-  
 }
