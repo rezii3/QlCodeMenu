@@ -50,7 +50,7 @@ const routes: Routes = [
   {
     path:'pizza',
     title: 'pizza',
-    loadChildren: () => import('./features/pizza/pizza.module').then((m) => m.PizzaModule)
+    loadChildren: () => import('./features/baked/baked.module').then((m) => m.BakedModule)
   },
 ];
 

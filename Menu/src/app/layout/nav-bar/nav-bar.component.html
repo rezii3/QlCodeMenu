@@ -1,20 +1,20 @@
 <div class="navbar">
   <div class="background-image">
-    <img src="assets/img/auz.jpg" alt="">
+    <img src="assets/img/auzi-3.jpg" alt="">
   </div>
   <div class="content">
     <h1>New Space Rustavi</h1>
     <p><nz-icon nzType="phone" nzTheme="outline"></nz-icon> 551 700 700</p>
-    <p><nz-icon nzType="wifi" nzTheme="outline"></nz-icon> Password: newspace</p>
+    <p><nz-icon nzType="wifi" nzTheme="outline"></nz-icon> პაროლი: newspace</p>
 
     <div class="buttons">
       <div class="left-side">
-        <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Main menu</button>
-      <button routerLink="/bar" routerLinkActive="active">Bar</button>
+        <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">მთავარი მენიუ</button>
+      <button routerLink="/bar" routerLinkActive="active">ბარის მენიუ</button>
       </div>
 
       <div class="right-side">
-        <button *ngIf="showBackButton" class="back-btn" (click)="goBack()"><nz-icon nzType="arrow-left" nzTheme="outline" /></button>
+        <button  class="back-btn" (click)="goBack()"><nz-icon nzType="arrow-left" nzTheme="outline" /></button>
       </div>
     </div>
   </div>
