@@ -1,28 +1,30 @@
+
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10px, 3vw, 20px); // gap-საც ერგება ზომა
+  display: grid;
+  grid-template-columns: repeat(2, 250px); /* ორი სვეტი, თითო 250px */
+  column-gap: 30px;   /* ჰორიზონტალური დაშორება */
+  row-gap: 30px;      /* ვერტიკალური დაშორება */
+  width: fit-content; /* grid არ გაწელოს 100%-ზე — იყოს შიგთავსის სიგანის */
+  margin: 0 auto;     /* ცენტრში */
+  justify-items: center;
+  align-items: center;
 }
 
 .btn {
-  width: 90vw;
-  max-width: 525px;
-  height: calc(90vw * 0.35);
-  max-height: 180px;
+  width: 260px;
+  height: 230px;          /* სურვილით შეცვალე */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(16px, 6vw, 30px);
+  font-size: clamp(16px, 3vw, 30px);
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 30px;
+  border-radius: 40px;
   cursor: pointer;
   background-size: cover;
   background-position: center;
@@ -30,21 +32,19 @@
   overflow: hidden;
   transition: transform 0.3s ease, opacity 0.3s ease;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  color: white;
+  color: #fff;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
   &:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
+    transform: scale(1.03);
+    opacity: 0.95;
   }
 
-  .overlay {
+  .overlay { /* თუ overlay გჭირდება */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    background: rgba(0,0,0,0.5);
     border-radius: inherit;
     z-index: 1;
   }
@@ -52,34 +52,28 @@
   span {
     position: relative;
     z-index: 2;
-    display: inline-block;
     width: 100%;
     text-align: center;
-    line-height: 1.2; // ტექსტის სწორად გასწორებისთვის
+    line-height: 1.2;
   }
 }
 
-// ფონის სურათები თითოეული ღილაკისთვის
-.food {
-  background-image: url('../../../../assets/img/food.png');
+/* მცირე ეკრანებზე ავტომატურად გადავიდეს 1 სვეტზე */
+@media (max-width: 560px) {
+  .content {
+    grid-template-columns: 1fr;
+    width: min(86vw, 360px);
+  }
+  .btn {
+    width: 100%;
+    height: clamp(140px, 52vw, 200px);
+  }
 }
 
-.salad {
-  background-image: url('../../../../assets/img/salad.jpg');
-}
-
-.pizza {
-  background-image: url('../../../../assets/img/pizza.jpg');
-}
-
-.soup {
-  background-image: url('../../../../assets/img/soup2.jpg');
-}
-
-.asia {
-  background-image: url('../../../../assets/img/asia.jpg');
-}
-
-.dessert {
-  background-image: url('../../../../assets/img/dessert.jpg');
-}
+/* ფონის სურათები */
+.food    { background-image: url('../../../../assets/img/geo-dish.png'); }
+.salad   { background-image: url('../../../../assets/img/apetaizer.png'); }
+.pizza   { background-image: url('../../../../assets/img/comeuli.png'); }
+.soup    { background-image: url('../../../../assets/img/soup.png'); }
+.asia    { background-image: url('../../../../assets/img/dafebi.png'); }
+.dessert { background-image: url('../../../../assets/img/desert.png'); }

@@ -1,8 +1,8 @@
-
-<div class="menu">
-<app-menu-cards  *ngFor="let dis of dishes"
-[image]="dis.img"
-[name]="dis.name"
-[description]="dis.description"
-[price]="dis.price"></app-menu-cards>
+<div class="grid-2">
+  <app-menu-cards *ngFor="let dis of dishes"
+    [image]="dis.img"
+    [name]="dis.name"
+    [description]="dis.description"
+    [price]="dis.price">
+  </app-menu-cards>
 </div>
